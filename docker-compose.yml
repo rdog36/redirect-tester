@@ -1,0 +1,13 @@
+version: '2'
+services:
+  apache:
+      build:
+        context: .
+        dockerfile: docker/apache/Dockerfile
+      ports:
+          - 8080:8080
+      container_name: redirect_tester_apache
+      volumes:
+          - .:/app:rw
+          - ./conf.d:/usr/local/apache2/conf.d:rw
+          - ./test-script:/opt/redirect
