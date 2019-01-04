@@ -32,16 +32,7 @@ const check = function(host, path, expectedRedirect, statusCode) {
   });
 }
 
-describe('Redirect server', function() {
-
-  // Make sure we are running the test against the docker container and not production environment
-  describe('Test environment', function() {
-    it('should redirect example.org to mydomain.com', () => check('example.org', null, 'https://mydomain.com/'));
-  });
-
-  describe('myotherdomain.com', function() {
-    it('should redirect to www.mydomain.com', () => check('myotherdomain.com', null, 'https://www.mydomain.com/'));
-    it('should redirect to www.mydomain.com while preserving path', () => check('myotherdomain.com', '/some/path/', 'https://www.mydomain.com/some/path/'));
-  });
-
-});
+module.exports = {
+  axios: axios,
+  check: check
+}

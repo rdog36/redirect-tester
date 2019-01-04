@@ -7,4 +7,4 @@ RUN apk add --update nodejs npm
 RUN echo "Include /usr/local/apache2/conf.d/redirect.conf" >> /usr/local/apache2/conf/httpd.conf;
 
 ## Run tests
-#RUN /opt/redirect/test.sh
+WORKDIR /opt/redirect
