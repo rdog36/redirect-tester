@@ -1,4 +1,3 @@
-======
 Setup 
 ======
 
@@ -6,7 +5,6 @@ Setup
 - Add Tests to be performed to `/test-script/test/*.test.js`
     - ensure that the test script is headed with `var redirect = require('../redirect.test.js')` and calls `redirect.check()` instead of `check()`
 
-======
 Use
 ======
 
