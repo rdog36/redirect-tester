@@ -1,3 +1,5 @@
+var live = process.env.LIVE
+
 const axios = require('axios');
 
 // check(host, path, expectedRedirect, statusCode)
@@ -11,8 +13,15 @@ const check = function(host, path, expectedRedirect, statusCode) {
   if (path.substr(0,1) === '/') path = path.substr(1);
   statusCode = statusCode || 302;
 
+  if (live === "true"){
+    var url = 'http://' + host + '/' + path;
+  }
+  else {
+    var url = 'http://127.0.0.1/' + path;
+  }
+
   // We can only check http because the Docker redirect server usually runs behind a loadbalancer
-  return axios({ method: 'GET', url: `http://127.0.0.1/${path}`, headers: {Host: host}, maxRedirects: 0})
+  return axios({ method: 'GET', url: url, headers: {Host: host}, maxRedirects: 0})
   .then(function (response) {
     return Promise.reject('No redirect status code received');
   })
