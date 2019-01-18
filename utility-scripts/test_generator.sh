@@ -17,10 +17,10 @@ for filename in $confsToSpec; do
 
 	describe('$sitename.vhost.conf', function() {
 
-	  describe('$sitename', function() {
+	  describe('www.$sitename', function() {
 	    it('should redirect to $rewriteTarget',
 	        () => redirect.check(
-	            '$sitename',
+	            'www.$sitename',
 	            null ,
 	            '$rewriteTarget'));
 	  });
