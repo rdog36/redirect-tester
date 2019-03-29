@@ -24,7 +24,7 @@ echo '' > /usr/local/apache2/conf.d/redirect-test.conf
 
 
 if [[ $LIVE == true ]]; then
-	env LIVE=true node node_modules/.bin/mocha
+	env LIVE=true node node_modules/.bin/mocha --recursive
 else
-	exec node_modules/.bin/mocha
+	exec node_modules/.bin/mocha --recursive
 fi

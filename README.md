@@ -4,7 +4,7 @@ Setup
 - Add site-specific VirtualHost configurations and redirect rules for testing to `/conf.d/*.vhost.conf`
     - An example is provided with `example.vhost.conf`
 - Add Tests to be performed to `/test-script/test/*.test.js`
-    - ensure that the test script is headed with `var redirect = require('../redirect.test.js')` and calls `redirect.check()` instead of `check()`
+    - ensure that the test script is headed with `var redirect = require('/opt/redirect/redirect.test.js')` and calls `redirect.check()` instead of `check()`
     - `redirect.check`'s parameters are: (host, path, expectedRedirect, statusCode)
         - `host` is simply the hostname you are testing - example.com, teleflex.com, etc.
         - `path` is anything in the URL that you are looking for after the hostname - `/careers`, `/products/<someRegEx>`, etc.

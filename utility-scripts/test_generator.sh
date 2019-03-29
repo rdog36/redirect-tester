@@ -13,7 +13,7 @@ for filename in $confsToSpec; do
  specDirectory=${sourceDirectory/conf.d/spec}
  touch $specDirectory/$sitename.test.js
  cat > $specDirectory/$sitename.test.js << EOF
-	var redirect = require('../redirect.test.js')
+	var redirect = require('/opt/redirect/redirect.test.js')
 
 	describe('$sitename.vhost.conf', function() {
 
