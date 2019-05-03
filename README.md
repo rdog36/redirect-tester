@@ -39,4 +39,4 @@ Navigate to `/utility-scripts` and enjoy the following extra functions:
 
 By default the test will redirect from the hostname to the first RewriteRule target found in your vhost file. The test can be modified to your liking from there.
 
-- ./httpd-compare.sh specifically diffs the Include statements in your httpd.conf file with one called "httpd-prod.conf". Grab your httpd.conf from your Production Apache server, place it in conf.d, and rename it to httpd-prod.conf, then run this script to diff them.
+- `./httpd-compare.sh` specifically diffs the Include statements in your `httpd.conf` file with one called `httpd-prod.conf`. Grab your `httpd.conf` from your Production Apache server, place it in `conf.d`, and rename it to `httpd-prod.conf`, then run this script to diff them.
