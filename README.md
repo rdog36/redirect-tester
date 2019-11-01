@@ -1,7 +1,7 @@
 About
 ======
 
-This is a lightweight Docker-based tool that allows you to test Apache mod_rewrite redirects on a test server with Mocha. The core functions this tool were written by Remie Bolte and taken from the following article: https://medium.com/@remie/creating-a-realiable-and-scalable-redirect-server-with-docker-mocha-tests-ftw-86f98bb8f4a8
+This is a lightweight Docker-based tool that allows you to test Apache mod_rewrite redirects on a test server with Mocha. The core functions of this tool were written by Remie Bolte and taken from the following article: https://medium.com/@remie/creating-a-realiable-and-scalable-redirect-server-with-docker-mocha-tests-ftw-86f98bb8f4a8
 The code snippets have been adapted into an easy to use and deploy Docker box and their functionality has been expanded, adding a simple spec-test generator, a basic httpd.conf diff script, recursive reading of directories containing configuration files, and the ability to run the tests on the live web.
 
 
